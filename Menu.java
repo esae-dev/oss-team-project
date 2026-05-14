@@ -16,7 +16,7 @@ public class Menu {
             2500
     };
 
-    // 메뉴판 출력
+    // 메뉴판 출력(사용자에게 보여줄 때는 1번부터 출력함)
     public void printMenu() {
 
         System.out.println("===== 메뉴판 =====");
@@ -40,4 +40,9 @@ public class Menu {
     public int getMenuCount() {
         return menuNames.length;
     }
+
+    // 메뉴 번호는 화면에 1번부터 출력되고,
+    // 배열 내부에서는 0번 index부터 메뉴 정보를 관리하도록 하겠음
+    // (출력은 1부터, 내부는 0부터)
+    
 }
