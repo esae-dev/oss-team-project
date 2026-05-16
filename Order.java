@@ -21,4 +21,24 @@ public void addOrder(String menuName, int menuPrice) {
 
     System.out.println(menuName + " 주문이 추가되었습니다.");
     }
+    // 주문 내역 출력 기능
+public void showOrderList() {
+
+    if (orderCount == 0) {
+        System.out.println("주문 내역이 없습니다.");
+        return;
+    }
+
+    System.out.println("===== 주문 내역 =====");
+
+    for (int i = 0; i < orderCount; i++) {
+        System.out.printf("%d. %-10s %,6d원\n",
+                i + 1,
+                orderedMenus[i],
+                orderedPrices[i]);
+    }
+
+    System.out.println("====================");
+    System.out.printf("총 금액: %,d원\n", totalPrice);
+    }
 }
