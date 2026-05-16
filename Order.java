@@ -41,4 +41,15 @@ public void showOrderList() {
     System.out.println("====================");
     System.out.printf("총 금액: %,d원\n", totalPrice);
     }
+    // 주문 초기화 기능
+public void clearOrder() {
+
+    orderedMenus = new String[10];
+    orderedPrices = new int[10];
+
+    orderCount = 0;
+    totalPrice = 0;
+
+    System.out.println("주문 내역이 초기화되었습니다.");
+    }
 }
