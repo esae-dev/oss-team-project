@@ -14,4 +14,7 @@ public class Option {
         }
         return "INVALID";
     }
+        public boolean isValidOption(int choice) {
+        return choice == 1 || choice == 2;
+    }
 }
