@@ -15,7 +15,14 @@ public class Menu {
             5500,
             2500
     };
-
+    //메뉴 카테고리 정보 추가
+    private Category[] menuCategories = {
+        Category.DRINK,
+        Category.DRINK,
+        Category.DRINK,
+        Category.FOOD,
+        Category.FOOD
+};
     // 메뉴판 출력(사용자에게 보여줄 때는 1번부터 출력함)
     public void printMenu() {
 
