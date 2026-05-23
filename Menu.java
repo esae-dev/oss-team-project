@@ -51,5 +51,8 @@ public class Menu {
     public Category getMenuCategory(int index) {
         return menuCategories[index];
     }
-    
+    // 음료 메뉴인지 확인
+    public boolean isDrink(int index) {
+        return menuCategories[index] == Category.DRINK;
+    }
 }
