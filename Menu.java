@@ -55,4 +55,8 @@ public class Menu {
     public boolean isDrink(int index) {
         return menuCategories[index] == Category.DRINK;
     }
+    // 음식 메뉴인지 확인
+    public boolean isFood(int index) {
+        return menuCategories[index] == Category.FOOD;
+    }
 }
