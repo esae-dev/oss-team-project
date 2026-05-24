@@ -8,6 +8,7 @@ public class Main {
         Order order = new Order();
         InputCheck inputCheck = new InputCheck();
         Receipt receipt = new Receipt();
+        Option option = new Option(); // option 객체추가
 
         System.out.println("Mini Kiosk Program");
 
