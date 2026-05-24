@@ -30,6 +30,10 @@ public class Main {
 
             String menuName = menu.getMenuName(menuIndex);
             int menuPrice = menu.getMenuPrice(menuIndex);
+            // 음료 메뉴 옵션 출력 기능 연결
+            if (menu.isDrink(menuIndex)) {
+                option.printOptions();
+            }
 
             order.addOrder(menuName, menuPrice);
             System.out.println();
