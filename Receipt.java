@@ -8,10 +8,12 @@ public class Receipt {
         System.out.println("===== 영수증 =====");
 
         for (int i = 0; i < order.getOrderCount(); i++) {
-            System.out.printf("%d. %-10s %,6d원\n",
+            System.out.printf("%d. %-10s %,6d원 x %d개 = %,6d원\n",
                     i + 1,
                     order.getOrderedMenu(i),
-                    order.getOrderedPrice(i));
+                    order.getOrderedPrice(i),
+                    order.getOrderedQuantity(i),
+                    order.getOrderedTotalPrice(i));
         }
 
         System.out.println("====================");
