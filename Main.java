@@ -30,7 +30,14 @@ public class Main {
             String menuName = menu.getMenuName(menuIndex);
             int menuPrice = menu.getMenuPrice(menuIndex);
 
-            order.addOrder(menuName, menuPrice);
+            System.out.print("수량을 입력하세요: ");
+            int quantity = scanner.nextInt();
+
+            if (!inputCheck.isValidQuantity(quantity)) {
+                continue;
+            }
+
+            order.addOrder(menuName, menuPrice, quantity);
             System.out.println();
         }
 
