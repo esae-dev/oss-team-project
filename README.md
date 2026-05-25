@@ -29,13 +29,12 @@ Java 콘솔 기반 미니 키오스크 주문 프로그램입니다.
 ### 추가할 기능(2차)
 3. Option.java : 음료 메뉴에 hot/iced 옵션을 추가합니다.
 4. Category.java : 메뉴를 food, drink 등으로 구분합니다.
-5. Cart.java : 다중 주문 - 한 번에 여러 메뉴를 주문할 수 있도록 확장합니다. //Order.java에 통합
 
 ### 추가할 기능(3차)_객체 변환
-6. MenuItem.java : 메뉴 이름과 가격을 하나의 객체로 분리
-7. OrderItem.java : 주문한 메뉴/수량/합계 금액을 하나의 객체로 분리
+5. MenuItem.java : 메뉴 이름과 가격을 하나의 객체로 분리
+6. OrderItem.java : 주문한 메뉴/수량/합계 금액을 하나의 객체로 분리
 
 ### 추가할 기능(4차)_GUI 확장과 함께 추가(추후)
-8. OptionManager : (음료일 때) 메뉴에 옵션 붙이기
-9. PaymentManager : 결제 수단 목록 출력
-10. DiscountManager : 할인 기능
+7. OptionManager.java : (음료일 때) 메뉴에 옵션 붙이기
+8. PaymentManager.java : 결제 수단 목록 출력
+9. DiscountManager.java : 할인 기능
