@@ -15,7 +15,14 @@ public class Menu {
             5500,
             2500
     };
-
+    //메뉴 카테고리 조회 기능 추가
+    private Category[] menuCategories = {
+        Category.DRINK,
+        Category.DRINK,
+        Category.DRINK,
+        Category.FOOD,
+        Category.FOOD
+};
     // 메뉴판 출력(사용자에게 보여줄 때는 1번부터 출력함)
     public void printMenu() {
 
@@ -40,9 +47,16 @@ public class Menu {
     public int getMenuCount() {
         return menuNames.length;
     }
-
-    // 메뉴 번호는 화면에 1번부터 출력되고,
-    // 배열 내부에서는 0번 index부터 메뉴 정보를 관리하도록 하겠음
-    // (출력은 1부터, 내부는 0부터)
-    
+    // 메뉴 카테고리 반환
+    public Category getMenuCategory(int index) {
+        return menuCategories[index];
+    }
+    // 음료 메뉴인지 확인
+    public boolean isDrink(int index) {
+        return menuCategories[index] == Category.DRINK;
+    }
+    // 음식 메뉴인지 확인
+    public boolean isFood(int index) {
+        return menuCategories[index] == Category.FOOD;
+    }
 }
