@@ -8,7 +8,6 @@ public class Main {
         Order order = new Order();
         InputCheck inputCheck = new InputCheck();
         Receipt receipt = new Receipt();
-        Option option = new Option(); // option 객체추가
 
         System.out.println("Mini Kiosk Program");
 
@@ -16,7 +15,7 @@ public class Main {
             menu.printMenu();
 
             System.out.print("메뉴 번호를 입력하세요 (0 입력 시 주문 종료): ");
-            int menuNumber = scanner.nextInt(); //일단 번호로만 입력받음(추후 업데이트 예정)
+            int menuNumber = scanner.nextInt();
 
             if (menuNumber == 0) {
                 break;
@@ -30,10 +29,6 @@ public class Main {
 
             String menuName = menu.getMenuName(menuIndex);
             int menuPrice = menu.getMenuPrice(menuIndex);
-            // 음료 메뉴 옵션 출력 기능 연결
-            if (menu.isDrink(menuIndex)) {
-                option.printOptions();
-            }
 
             order.addOrder(menuName, menuPrice);
             System.out.println();
