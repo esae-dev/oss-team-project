@@ -5,7 +5,7 @@ public class Receipt {
             return;
         }
 
-        System.out.println("===== 영수증 =====");
+        System.out.println("========== 영수증 ==========");
 
         for (int i = 0; i < order.getOrderCount(); i++) {
             System.out.printf("%d. %-10s %,6d원 x %d개 = %,6d원\n",
@@ -16,7 +16,8 @@ public class Receipt {
                     order.getOrderedTotalPrice(i));
         }
 
-        System.out.println("====================");
-        System.out.printf("총 금액: %,d원\n", order.getTotalPrice());
+        System.out.println("--------------------------");
+        System.out.printf("총 금액 : %,d원\n", order.getTotalPrice());
+        System.out.println("==========================");
     }
 }
