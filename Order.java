@@ -1,7 +1,5 @@
 public class Order {
-    private String[] orderedMenus = new String[10];
-    private int[] orderedPrices = new int[10];
-    private int[] orderedQuantities = new int[10];
+    private OrderItem[] orderItems = new OrderItem[10];
 
     private int orderCount = 0;
     private int totalPrice = 0;
@@ -13,25 +11,22 @@ public class Order {
 
     // 수량 기능이 추가된 주문 메서드
     public void addOrder(String menuName, int menuPrice, int quantity) {
-        if (orderCount >= orderedMenus.length) {
+        if (orderCount >= orderItems.length) {
             System.out.println("더 이상 주문할 수 없습니다.");
             return;
         }
 
-        orderedMenus[orderCount] = menuName;
-        orderedPrices[orderCount] = menuPrice;
-        orderedQuantities[orderCount] = quantity;
+        OrderItem orderItem = new OrderItem(menuName, menuPrice, quantity);
+        orderItems[orderCount] = orderItem;
 
-        totalPrice += menuPrice * quantity;
+        totalPrice += orderItem.getTotalPrice();
         orderCount++;
 
         System.out.println(menuName + " " + quantity + "개 주문이 추가되었습니다.");
     }
 
     public void clearOrder() {
-        orderedMenus = new String[10];
-        orderedPrices = new int[10];
-        orderedQuantities = new int[10];
+        orderItems = new OrderItem[10];
 
         orderCount = 0;
         totalPrice = 0;
@@ -43,20 +38,24 @@ public class Order {
         return orderCount;
     }
 
+    public OrderItem getOrderItem(int index) {
+        return orderItems[index];
+    }
+
     public String getOrderedMenu(int index) {
-        return orderedMenus[index];
+        return orderItems[index].getMenuName();
     }
 
     public int getOrderedPrice(int index) {
-        return orderedPrices[index];
+        return orderItems[index].getMenuPrice();
     }
 
     public int getOrderedQuantity(int index) {
-        return orderedQuantities[index];
+        return orderItems[index].getQuantity();
     }
 
     public int getOrderedTotalPrice(int index) {
-        return orderedPrices[index] * orderedQuantities[index];
+        return orderItems[index].getTotalPrice();
     }
 
     public int getTotalPrice() {
