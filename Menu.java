@@ -18,6 +18,7 @@ public class Menu {
                     + menuItems[i].getPrice() 
                     + "원");
         }
+        System.out.println("0. 주문 종료");
     }
 
     public String getMenuName(int index) {
