@@ -1,7 +1,7 @@
 public class MenuItem {
-    private String name;
-    private int price;
-    private Category category;
+    private final String name;
+    private final int price;
+    private final Category category;
 
     public MenuItem(String name, int price, Category category) {
         this.name = name;
