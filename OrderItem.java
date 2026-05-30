@@ -1,7 +1,7 @@
 public class OrderItem {
-    private String menuName;
-    private int menuPrice;
-    private int quantity;
+    private final String menuName;
+    private final int menuPrice;
+    private final int quantity;
 
     public OrderItem(String menuName, int menuPrice, int quantity) {
         this.menuName = menuName;
